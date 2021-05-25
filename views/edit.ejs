@@ -1,0 +1,24 @@
+<%-include ('partials/header') %>
+
+<div class="container " style=" width:40% ; border: 2px solid; margin-top:7%;padding: 1%">
+	<form  action='/blogs/<%=thing[0]._id%>?_method=PUT' method="POST">
+	<div style="text-align: center;">
+		<h1>Update Post</h1>
+	</div>
+  <div class="form-group" style="text-align: left;padding:2%;">
+    <label for="exampleFormControlTextarea1"><strong>Title</strong></label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="title" ><%=thing[0].title%></textarea>
+   
+  </div>
+  
+  <div class="form-group" style="text-align: left; padding:2%;">
+    <label for="exampleFormControlTextarea1"><strong>Post Content</strong></label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="post" ><%=thing[0].post%></textarea>
+  </div>
+  <div class="col-12" style=" padding:2%;">
+    <button type="submit" class="btn btn-primary">Update</button>
+  </div>
+  
+</form>
+
+<%-include ('partials/footer')%>

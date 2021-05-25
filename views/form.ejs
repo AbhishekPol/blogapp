@@ -1,0 +1,28 @@
+<%- include ('partials/header') %>
+<div class="container " style=" width:40% ; border: 2px solid; margin-top:7%;padding: 1%">
+	<form  action='/blogs' method="POST">
+	<div style="text-align: center;">
+		<h1>New Post</h1>
+	</div>
+  <div class="form-group" style="text-align: left;padding:2%;">
+    <label  style='text-align: left;'for="exampleInputEmail1"><strong>Title</strong></label>
+    <input type="text" class="form-control" id="exampleInputEmail1"   name="title">
+   
+  </div>
+  <div class="form-group" style="text-align: left; padding:2%;">
+    <label  style='text-align: left;'for="exampleInputEmail1"><strong>Image</strong></label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="url" >
+   
+  </div>
+
+  <div class="form-group" style="text-align: left; padding:2%;">
+    <label for="exampleFormControlTextarea1"><strong>Post Content</strong></label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="post"></textarea>
+  </div>
+  <div class="col-12" style=" padding:2%;">
+    <button type="submit" class="btn btn-primary">Create Post</button>
+  </div>
+  
+</form>
+</div>
+<%- include ('partials/footer') %>

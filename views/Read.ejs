@@ -1,0 +1,26 @@
+
+<%- include ('partials/header') %>
+<div  class="container"  style="border: 2px solid;width:80%;height:65%; margin-top:2%;margin-bottom:0.5%">
+<div class="container" style="text-align: center;">
+	<h1><strong><%=thing[0].title%></strong></h1>
+</div>
+
+<div class="container" style="text-align: center">
+	<img style="width: 700px;height:300px;"src='<%=thing[0].url%>' >
+</div>
+
+ <div class="container" style="text-align: left;padding: 2%;padding-bottom: 4%">
+	<h4><%=thing[0].post%></h4>
+</div>
+
+<div class="container"style="margin: 1%;">
+	<a href=<%='/blogs/'+thing[0]._id+'/edit' %> style="width: 150px;height: 45px"type="button" class="btn btn-outline-primary"><strong>Update Post</strong></a>
+
+	<form style="display: inline;"  action='/blogs/<%=thing[0]._id%>?_method=DELETE' method="POST">
+    <button class="btn btn-outline-danger" style="width: 150px;height: 45px"type="submit"><strong>Delete Post</strong></button>
+</form>
+	
+</div>
+</div>
+
+<%- include ('partials/footer') %>
