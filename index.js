@@ -35,6 +35,24 @@ var blog=mongoose.model("blog",blogSchema);
 // 		console.log(blog);
 // });
 
+
+app.get('/',function (req,res) {
+  
+  blog.find({},function(err,thing)
+  {
+      if(err)
+      {
+        console.log(err);
+      }
+      else
+      {
+          res.redirect('/blogs');
+      }
+  });
+
+    
+});
+
 app.get('/blogs',function (req,res) {
 	
   blog.find({},function(err,thing)
