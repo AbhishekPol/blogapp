@@ -3,7 +3,7 @@ var methodOverride=require('method-override');
 var app=express();
 
 var mongoose=require('mongoose');
-mongoose.connect('mongodb://localhost/blog_app');
+mongoose.connect('mongodb+srv://dbuser:hello_world@cluster1.i6dj7.mongodb.net/message-database?retryWrites=true&w=majority');
 
 var bodyparser=require('body-parser');
 
